@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import 'materialize-css/dist/css/materialize.min.css';
+import 'materialize-css/dist/css/materialize.min.css'
+
 
 function App() {
   const [data, setData] = useState([]);
@@ -42,7 +43,14 @@ function App() {
 
   return (
     <div>
-      <nav></nav>
+      <nav className='blue z-depth-2'>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">ReactJs x RapidAPI</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="https://prince-i.github.io">Portfolio</a></li>
+        </ul>
+      </div>
+      </nav>
       <table className='centered'>
         <thead>
           <tr>
@@ -61,10 +69,10 @@ function App() {
           ))}
         </tbody>
       </table>
-      <ul className="pagination">
+      <ul className="pagination center">
         {pages.map(page => (
           <li key={page} className={page === currentPage ? 'active' : ''}>
-            <a href="#!" onClick={() => handlePageChange(page)}>{page}</a>
+            <a href="#!"  onClick={() => handlePageChange(page)}>{page}</a>
           </li>
         ))}
       </ul>
